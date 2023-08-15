@@ -1,3 +1,4 @@
+#5Ghz config
 set hostapd_config true
 set hostapd_config.hw_mode a
 set hostapd_config.vht_oper_chwidth 1
@@ -18,3 +19,18 @@ set hostapd_config.ieee80211ac 1
 set hostapd_config.vht_capab [RXLDPC][SHORT-GI-80][TX-STBC-2BY1][RX-STBC-1][MAX-A-MPDU-LEN-EXP3][RX-ANTENNA-PATTERN][TX-ANTENNA-PATTERN]
 dhcpconf 2
 set dhcpconf.classtype C
+
+#2Ghz config
+set hostapd_config.hw_mode g
+set hostapd_config.country_code US
+set hostapd_config.driver nl80211
+set hostapd_config.beacon_int 100
+set hostapd_config.dtim_period 2
+set hostapd_config.max_num_sta 32
+set hostapd_config.rts_threshold 2347
+set hostapd_config.fragm_threshold 2346
+set hostapd_config.macaddr_acl 0
+set hostapd_config.ignore_broadcast_ssid 0
+set hostapd_config.ieee80211n 1
+set hostapd_config.wmm_enabled 1
+set hostapd_config.ht_capab [HT40+][HT40-][GF][SHORT-GI-20][SHORT-GI-40]
